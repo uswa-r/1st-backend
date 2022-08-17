@@ -41,7 +41,7 @@ const updateProductData = async(req, res) => {
 	try {
 		const docToUpdate = await productData.updateMany(
 			{productPrice:0}
-		)
+		);
 		res.json({
 			Message:'Documents has been updated!',
 			Data:true,
@@ -52,7 +52,7 @@ const updateProductData = async(req, res) => {
 			Message:error.message,
 			Result:null,
 			Data:false
-		})
+		});
 	}
 }
 
