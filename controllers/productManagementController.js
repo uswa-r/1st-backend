@@ -39,9 +39,8 @@ const getProductData = async(req, res) => {
 }
 const updateProductData = async(req, res) => {
 	try {
-		const docToUpdate = await productModel.updateMany( //update.Many isn't being suggested by Mongoose Intellisense, hence causing productModel.updateMany is not a function at Postman app.
-			{productPrice:0},
-			// {$update: {productPrice:0}}
+		const docToUpdate = await productModel.updateMany(
+			{productPrice:1},
 		);
 		res.json({
 			Message:'Documents has been updated!',
